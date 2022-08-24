@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity" >
+    
+	<!-- Proses Login -->
+	<ProgressBar 
+	    android:id="@+id/proses_login"
+	    style="?android:attr/progressBarStyleLarge"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="8dp"
+	    android:visibility="gone" />
+
+	<ScrollView
+	    android:id="@+id/form_login"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    
+	    <LinearLayout 
+	        android:id="@+id/email_login_form"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        
+	        <com.google.andorid.material.textfield.TextInputLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content">
+	            
+	            <EditText 
+			        android:id="@+id/email"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:inputType="textEmailAddress"
+			        android:hint="Masukkan Email"
+			        android:maxLines="1"
+			        android:singleLine="true"
+			        tools:ignore="SpeakableTextPresentCheck"/>
+	           
+	        </com.google.andorid.material.textfield.TextInputLayout>
+	        
+	        <com.google.andorid.material.textfield.TextInputLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content">
+	            
+	            <EditText 
+			        android:id="@+id/password"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:inputType="textPassword"
+			        android:imeActionId="@+id/login"
+			        android:hint="Masukkan Password"
+			        android:maxLines="1"
+			        android:singleLine="true"
+			        tools:ignore="InvalidImeActionId,SpeakableTextPresentCheck"/>
+	           
+	        </com.google.andorid.material.textfield.TextInputLayout>
+	        
+	        <CheckBox 
+	            android:id="@+id/checkIngatkanSaya"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Ingatkan Saya"/>
+	        
+	        <Button 
+	            android:id="@+id/MasukButton"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="16dp"
+	            android:text="Sign In"
+	            android:textStyle="bold"
+	            />
+	                  
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
