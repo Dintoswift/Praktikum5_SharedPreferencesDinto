@@ -62,7 +62,7 @@ public class LoginActivity extends Activity {
     	}
     	
     	if (TextUtils.isEmpty(email)){
-    		mEmailView.setError(getString(R.string.error_fie;d_required));
+    		mEmailView.setError(getString(R.string.error_field_required));
     		focusView = mEmailView;
     		cancel = true;
     	}else if (!isEmailValid(email)){
